@@ -19,6 +19,6 @@ enterInput.addEventListener('keyup', function(event) {
         newItemText = messageText;
         newItem.prepend(newItemText);
         conteinerItems.prepend(newItem);
+        enterInput.value = ('');
     }
-
 })
