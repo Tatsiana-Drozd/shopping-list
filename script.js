@@ -13,12 +13,9 @@ const conteinerItems = document.querySelector('#items');
 enterInput.addEventListener('keyup', function(event) {
     if (event.keyCode === 13) {
         const messageText = enterInput.value;
-        const newItem = document.createElement('div');
-        newItem.classList.add('newItem');
         let newItemText = document.createElement('p');
-        newItemText = messageText;
-        newItem.prepend(newItemText);
-        conteinerItems.prepend(newItem);
+        newItemText.textContent = messageText;
+        conteinerItems.prepend(newItemText);
         enterInput.value = ('');
         newItemText.addEventListener('click', function() {
             newItemText.classList.toggle('done');
