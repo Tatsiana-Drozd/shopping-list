@@ -20,5 +20,8 @@ enterInput.addEventListener('keyup', function(event) {
         newItem.prepend(newItemText);
         conteinerItems.prepend(newItem);
         enterInput.value = ('');
+        newItemText.addEventListener('click', function() {
+            newItemText.classList.toggle('done');
+        })
     }
 })
