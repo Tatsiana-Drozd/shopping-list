@@ -16,7 +16,7 @@ enterInput.addEventListener('keyup', function(event) {
         const newItemText = document.createElement('p');
         newItemText.textContent = messageText;
         conteinerItems.prepend(newItemText);
-        enterInput.value = ('');
+        enterInput.value = '';
         newItemText.addEventListener('click', function() {
             newItemText.classList.toggle('done');
         })
