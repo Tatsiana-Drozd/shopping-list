@@ -10,14 +10,15 @@
 const enterInput = document.querySelector('#input');
 const conteinerItems = document.querySelector('#items');
 
-enterInput.addEventListener('click', function() {
+enterInput.addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
         const messageText = enterInput.value;
         const newItem = document.createElement('div');
         newItem.classList.add('newItem');
-        const newItemText = document.createElement('p');
+        let newItemText = document.createElement('p');
         newItemText = messageText;
         newItem.prepend(newItemText);
         conteinerItems.prepend(newItem);
     }
 
-)
+})
