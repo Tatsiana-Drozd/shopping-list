@@ -13,7 +13,7 @@ const conteinerItems = document.querySelector('#items');
 enterInput.addEventListener('keyup', function(event) {
     if (event.keyCode === 13) {
         const messageText = enterInput.value;
-        let newItemText = document.createElement('p');
+        const newItemText = document.createElement('p');
         newItemText.textContent = messageText;
         conteinerItems.prepend(newItemText);
         enterInput.value = ('');
